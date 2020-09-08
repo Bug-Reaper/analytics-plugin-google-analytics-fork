@@ -1,5 +1,5 @@
 {
-  "name": "@analytics/google-analytics",
+  "name": "google-analytics",
   "version": "0.5.1",
   "description": "Google analytics plugin for 'analytics' module",
   "projectMeta": {
