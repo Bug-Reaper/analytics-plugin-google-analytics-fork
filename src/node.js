@@ -27,7 +27,14 @@ let univeralAnalyticsRosettaStone= {
   dimension17:"cd17",
   dimension18:"cd18",
   dimension19:"cd19",
-  dimension20:"cd20"
+  dimension20:"cd20",
+  ipAddress:"uip",
+  userAgent:"ua",
+  geoLocation:"geoid",
+  appName:"an",
+  appId:"aid",
+  appVersion:"av",
+  appInstallerId:"aiid"
 }
 
 let universalAnalytics

@@ -177,7 +177,7 @@ var analyticsGa = (function (exports) {
               }
             });
           }
-          /* set custom dimenions from user traits */
+          /* set custom dimensions from user traits */
 
 
           var user = instance.user() || {};
@@ -213,7 +213,7 @@ var analyticsGa = (function (exports) {
           }, {});
 
           if (Object.keys(resetDimensions).length) {
-            // Reset custom dimenions
+            // Reset custom dimensions
             ga("".concat(instancePrefix, "set"), resetDimensions);
           }
         }
@@ -234,7 +234,7 @@ var analyticsGa = (function (exports) {
         }
 
         var campaignData = addCampaignData(campaign);
-        var dimensions = setCustomDimenions(properties, config, instancePrefix);
+        var dimensions = setCustomDimensions(properties, config, instancePrefix);
         /* Dimensions will only be included in the event if config.setCustomDimensionsToPage is false */
 
         var finalPayload = _objectSpread2(_objectSpread2(_objectSpread2({}, pageView), campaignData), dimensions);
@@ -353,7 +353,7 @@ var analyticsGa = (function (exports) {
     var campaignData = addCampaignData(eventData);
     /* Set Dimensions or return them for payload is config.setCustomDimensionsToPage is false */
 
-    var dimensions = setCustomDimenions(payload.properties, opts, instancePrefix);
+    var dimensions = setCustomDimensions(payload.properties, opts, instancePrefix);
 
     var finalPayload = _objectSpread2(_objectSpread2(_objectSpread2({}, data), campaignData), dimensions);
     /* Send data to Google Analytics */
@@ -433,7 +433,7 @@ var analyticsGa = (function (exports) {
     return obj === undef ? def : obj;
   }
 
-  function setCustomDimenions() {
+  function setCustomDimensions() {
     var props = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
     var opts = arguments.length > 1 ? arguments[1] : undefined;
     var instancePrefix = arguments.length > 2 ? arguments[2] : undefined;
@@ -441,7 +441,7 @@ var analyticsGa = (function (exports) {
 
     if (!Object.keys(customDimensions).length) {
       return {};
-    } // If setCustomDimensionsToPage false, don't save custom dimenions from event to page
+    } // If setCustomDimensionsToPage false, don't save custom dimensions from event to page
 
 
     if (!opts.setCustomDimensionsToPage) {
